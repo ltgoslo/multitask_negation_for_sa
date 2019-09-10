@@ -13,16 +13,16 @@ Sentiment analysis is directly affected by _compositional phenomena_ in language
 4. Transfer-learning
 
 ## Datasets
-1. SST
-2. SemEval
-3. SFU
-4. Conan Doyle Neg (\*Sem 2012)
-5. Streusle
+1. [SST](https://nlp.stanford.edu/sentiment/treebank.html)
+2. [SemEval 2013 SA task](https://www.cs.york.ac.uk/semeval-2013/task2/)
+3. [SFU Review Corpus](https://www.sfu.ca/~mtaboada/SFU_Review_Corpus.html)
+4. [Conan Doyle Neg (\*Sem 2012)](https://www.clips.uantwerpen.be/sem2012-st-neg/)
+5. [Streusle Dataset](https://github.com/nert-nlp/streusle)
 
 ## Embeddings
 You can find the embeddings used in the experiments [here](https://drive.google.com/open?id=1GpyF2h0j8K5TKT7y7Aj0OyPgpFc8pMNS). Untar the file and use the 'google.txt' embeddings.
 
-### Requirements
+## Requirements
 
 1. Python 3
 2. sklearn  ```pip install -U scikit-learn```
