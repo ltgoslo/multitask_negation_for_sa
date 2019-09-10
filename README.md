@@ -19,11 +19,15 @@ Sentiment analysis is directly affected by _compositional phenomena_ in language
 4. Conan Doyle Neg (\*Sem 2012)
 5. Streusle
 
+## Embeddings
+You can find the embeddings used in the experiments [here](https://drive.google.com/open?id=1GpyF2h0j8K5TKT7y7Aj0OyPgpFc8pMNS). Untar the file and use the 'google.txt' embeddings.
+
 ### Requirements
 
 1. Python 3
 2. sklearn  ```pip install -U scikit-learn```
-3. Pytorch ```pip install torch torchvision```
+3. Pytorch ```pip install torch torchvision torchtext```
 4. nltk ```pip install nltk```
-
+5. matplotlib ```pip install matplotlib```
+6. tqdm ```pip install tqdm```
 
