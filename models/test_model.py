@@ -63,13 +63,7 @@ def test_model(aux_task, DATA_DIR, DATASET, num_runs=5, metric="acc",
     sst = SSTDataset(vocab, False, datadir)
     maintask_test_iter = sst.get_split("test")
 
-    chfile = "../data/challenge_dataset/sst-{0}.txt".format(args.FINE_GRAINED)
-    challenge_dataset = ChallengeDataset(vocab, False, chfile)
-    challenge_test = challenge_dataset.get_split()
-
     new_matrix = np.zeros(matrix_shape)
-
-
 
     if aux_task in ["negation_scope", "negation_scope_starsem"]:
         X, Y, org_X, org_Y, word2id, char2id, task2label2id =\
@@ -144,17 +138,6 @@ def test_model(aux_task, DATA_DIR, DATASET, num_runs=5, metric="acc",
             aux_preds.append(pred)
             aux_ys.append(ys)
 
-
-        print("Eval on challenge data")
-        chf1, chacc, chpred, chy = model.eval_sent(challenge_test, batch_size=1)
-        print()
-
-        # print challenge predictions to check
-        prediction_dir = os.path.join("predictions", "SST-{0}".format(FINE_GRAINED), aux_task)
-        os.makedirs(prediction_dir, exist_ok=True)
-        with open(os.path.join(prediction_dir, "run{0}_challenge_pred.txt".format(run)), "w") as out:
-            for line in chpred:
-                out.write("{0}\n".format(line))
     mean_f1 = np.mean(f1s)
     std_f1 = np.std(f1s)
 
