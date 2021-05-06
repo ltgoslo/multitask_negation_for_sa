@@ -1,9 +1,9 @@
 # Improving Sentiment Analysis with Multi-task Learning of Negation
 
-[Jeremy Barnes](jeremycb@ifi.uio.no),
-[Lilja Øvrelid](liljao@ifi.uio.no),
-and [Erik Velldal](erikve@ifi.uio.no)
+This repo accompanies the paper by the same name [published in Natural Language Engineering](https://www.cambridge.org/core/journals/natural-language-engineering/article/abs/improving-sentiment-analysis-with-multitask-learning-of-negation/14EF2B829EC4B8EC29E7C0C5C77B95B0) (Volume 27, Issue 2) 2020, by  
+[Jeremy Barnes](jeremycb@ifi.uio.no), [Lilja Øvrelid](liljao@ifi.uio.no), and [Erik Velldal](erikve@ifi.uio.no). Pre-print available on [arXiv](https://arxiv.org/abs/1906.07610).
 
+## Summary 
 Sentiment analysis is directly affected by _compositional phenomena_ in language that act on the prior polarity of the words and phrases found in the text. __Negation__ is the most prevalent of these phenomena and in order to correctly predict sentiment, a classifier must be able to identify negation and disentangle the effect that its scope has on the final polarity of a text. This paper proposes a multi-task approach to explicitly incorporate information about negation in sentiment analysis, which we show outperforms learning negation implicitly in a data-driven manner. We describe our approach, a __cascading neural architecture with selective sharing of LSTM layers__, and show that explicitly training the model with negation as an auxiliary task helps improve the main task of sentiment analysis. The effect is demonstrated across several different standard English-language datasets for both tasks and we analyze several aspects of our system related to its performance, varying types and amounts of input data and different multi-task setups.
 
 ## Models
